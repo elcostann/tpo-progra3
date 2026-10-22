@@ -56,14 +56,7 @@ public class Menu {
     //  1. GESTIÓN DE PEDIDOS
     // =====================================================================
 
-    /**
-     * Carga 5 pedidos de ejemplo, registrados desordenados a propósito.
-     * Empates pensados para mostrar los desempates de MergeSort:
-     *   - Prioridad 5 y misma fecha (22/10): pedidos 2 y 5 -> se desempata por id.
-     *   - Prioridad 5 con distinta fecha: pedido 4 (30/10) queda después de 2 y 5.
-     *   - Prioridad 3 con distinta fecha: pedido 3 (22/10) va antes que el 1 (25/10).
-     *   - Misma fecha 22/10 en los pedidos 2, 3 y 5 -> al ordenar por fecha se desempata por id.
-     */
+   
     private static void precargarPedidos() {
         servicioPedidos.registrarPedido(new Pedido(4, "Centro Oeste", LocalDate.of(20261, 10, 30), 5, 60));
         servicioPedidos.registrarPedido(new Pedido(1, "Centro Norte", LocalDate.of(2026, 10, 25), 3, 120));
